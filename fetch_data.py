@@ -54,7 +54,8 @@ def fetch_population() -> dict:
     Fetch total Estonian population per year (2015–2021) from Statistics Estonia API (RV0240).
 
     Returns a dict mapping year strings to population counts.
-    Sugu code '1' = Mehed ja naised (all), Elukoht '00' = Kogu Eesti, Vanus '000' = Kokku.
+    Sugu code '1' = Mehed ja naised (all genders), Elukoht '00' = Kogu Eesti (all of Estonia),
+    Vanus '000' = Kokku (total).
     """
     url = f"{API_BASE}/RV0240"
 
