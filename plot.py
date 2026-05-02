@@ -1,3 +1,12 @@
+"""
+plot.py — visualise Estonian crime victim probabilities as a lollipop chart.
+
+Reads processed probabilities from data/processed.json and produces one
+chart per year, saved to the output/ directory.
+
+Run after fetch_data.py and process.py:
+    python plot.py
+"""
 import json
 import os
 import matplotlib.pyplot as plt
