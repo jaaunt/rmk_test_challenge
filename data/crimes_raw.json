@@ -1,0 +1,93 @@
+{
+  "class": "dataset",
+  "label": "JS009: REGISTREERITUD KURITEOD | Aasta, Kuriteo aste/liik ning Maakond",
+  "source": "Statistikaamet",
+  "updated": "2018-04-17T05:00:00Z",
+  "id": [
+    "Aasta",
+    "Kuriteo aste/liik",
+    "Maakond"
+  ],
+  "size": [
+    1,
+    7,
+    1
+  ],
+  "dimension": {
+    "Aasta": {
+      "extension": {
+        "show": "value"
+      },
+      "label": "Aasta",
+      "category": {
+        "index": {
+          "2021": 0
+        },
+        "label": {
+          "2021": "2021"
+        }
+      }
+    },
+    "Kuriteo aste/liik": {
+      "extension": {
+        "show": "value"
+      },
+      "label": "Kuriteo aste/liik",
+      "category": {
+        "index": {
+          "6": 0,
+          "7": 1,
+          "9": 2,
+          "17": 3,
+          "18": 4,
+          "20": 5,
+          "35": 6
+        },
+        "label": {
+          "6": "..tapmine",
+          "7": "..mõrv",
+          "9": "..kehaline väärkohtlemine",
+          "17": "..vargus",
+          "18": "..röövimine",
+          "20": "..kelmus",
+          "35": "Liikluskuritegu"
+        }
+      }
+    },
+    "Maakond": {
+      "extension": {
+        "show": "value"
+      },
+      "label": "Maakond",
+      "category": {
+        "index": {
+          "00": 0
+        },
+        "label": {
+          "00": "Kogu Eesti"
+        }
+      }
+    }
+  },
+  "value": [
+    20,
+    7,
+    5646,
+    7513,
+    129,
+    1457,
+    3013
+  ],
+  "role": {
+    "time": [
+      "Aasta"
+    ]
+  },
+  "version": "2.0",
+  "extension": {
+    "px": {
+      "tableid": "JS009",
+      "decimals": 0
+    }
+  }
+}

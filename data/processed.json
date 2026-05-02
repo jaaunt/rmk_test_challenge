@@ -1,0 +1,37 @@
+[
+  {
+    "label": "Tapmine",
+    "count": 20,
+    "probability": 1.5016999243143238e-05
+  },
+  {
+    "label": "Mõrv",
+    "count": 7,
+    "probability": 5.255949735100133e-06
+  },
+  {
+    "label": "Kehaline väärkohtlemine",
+    "count": 5646,
+    "probability": 0.004239298886339336
+  },
+  {
+    "label": "Vargus",
+    "count": 7513,
+    "probability": 0.005641135765686757
+  },
+  {
+    "label": "Röövimine",
+    "count": 129,
+    "probability": 9.685964511827388e-05
+  },
+  {
+    "label": "Kelmus",
+    "count": 1457,
+    "probability": 0.001093988394862985
+  },
+  {
+    "label": "Liikluskuritegu",
+    "count": 3013,
+    "probability": 0.0022623109359795287
+  }
+]
