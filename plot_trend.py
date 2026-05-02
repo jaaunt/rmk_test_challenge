@@ -68,6 +68,11 @@ def plot_trend(data: dict, out_path: str):
             color=line.get_color(),
         )
     ax.grid(axis="y", which="major", alpha=0.25, color="#aaaaaa")
+    # Shaded COVID-19 period (2020–2021)
+    ax.axvspan("2020", "2021", alpha=0.08, color="red", zorder=0)
+    ax.annotate("COVID-19\nperiod", xy=("2020", ax.get_ylim()[1]),
+                xytext=(5, -15), textcoords="offset points",
+                fontsize=10, color="#cc4444")
     ax.spines[["top", "right"]].set_visible(False)
     ax.annotate(
         "Source: Statistics Estonia JS009 · RV0240",
