@@ -47,8 +47,8 @@ def plot_probability_scale(labels: list[str], probs: list[float], year: str, out
     offsets = [10] * len(probs_sorted)
 
     for i, (prob, label) in enumerate(zip(probs_sorted, labels_sorted)):
-        ax.hlines(i, 1e-1, prob, colors="#aac4d4", linewidth=1.5,
-                  linestyle="--", alpha=0.6) # x axis was reversed so 1e-7 has to be replaced with 1e-1
+        ax.hlines(i, 1e-7, prob, colors="#aac4d4", linewidth=1.5,
+                  linestyle="--", alpha=0.6)
         ax.scatter(prob, i, color="#1f6e8c", s=90, zorder=3)
         ax.annotate(
             f"1 in {round(1 / prob):,}".replace(",", "\u202f"),
@@ -64,7 +64,6 @@ def plot_probability_scale(labels: list[str], probs: list[float], year: str, out
 
     ax.set_xscale("log")
     ax.set_xlim(1e-7, 1e-1)
-    ax.invert_xaxis()  # invert so it grows along the x axis
     ax.set_ylim(-0.8, len(labels_sorted) - 0.2)
     ax.set_yticks(range(len(labels_sorted)))
     ax.set_yticklabels(labels_sorted, fontsize=11)
