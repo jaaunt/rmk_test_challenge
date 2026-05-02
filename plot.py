@@ -1,36 +1,31 @@
 import json
+import os
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
-import math
 
-# Estonian crime type labels in English for the plot
 CRIME_LABELS_EN = {
-    "Tapmine": "Manslaughter",
-    "Mõrv": "Murder",
-    "Kehaline väärkohtlemine": "Assault",
-    "Vargus": "Theft",
-    "Röövimine": "Robbery",
-    "Kelmus": "Fraud",
-    "Liikluskuritegu": "Traffic crime",
+    "Manslaughter": "Manslaughter",
+    "Murder": "Murder",
+    "Assault": "Assault",
+    "Theft": "Theft",
+    "Robbery": "Robbery",
+    "Fraud": "Fraud",
+    "Traffic crime": "Traffic crime",
 }
 
-def load_events(path: str) -> tuple[list[str], list[float]]:
-    """Load processed crime probabilities from JSON file."""
+def load_all_years(path: str) -> dict:
+    """Load processed crime probabilities for all years from JSON file."""
     with open(path, encoding="utf-8") as f:
-        events = json.load(f)
-    labels = [CRIME_LABELS_EN[e["label"]] for e in events]
-    probs = [e["probability"] for e in events]
-    return labels, probs
+        return json.load(f)
 
-def plot_probability_scale(labels: list[str], probs: list[float], out_path: str):
+def plot_probability_scale(labels: list[str], probs: list[float], year: str, out_path: str):
     """
     Draw a horizontal lollipop chart of annual crime probabilities on a log scale.
 
     Each marker represents the probability that a randomly selected Estonian
-    resident was a victim of that crime type in 2021.
+    resident was a victim of that crime type in the given year.
     X-axis uses a log scale to accommodate several orders of magnitude.
     """
-    # Sort ascending so rarest crime appears at the bottom
     paired = sorted(zip(probs, labels))
     probs_sorted = [p for p, _ in paired]
     labels_sorted = [l for _, l in paired]
@@ -39,20 +34,19 @@ def plot_probability_scale(labels: list[str], probs: list[float], out_path: str)
     fig.patch.set_facecolor("#f9f9f7")
     ax.set_facecolor("#f9f9f7")
 
-    # Alternate annotation above/below to avoid overlap between close points
-    offsets = [10, -14] * (len(probs_sorted) // 2 + 1)
+    offsets = [10] * len(probs_sorted)
 
     for i, (prob, label) in enumerate(zip(probs_sorted, labels_sorted)):
-        ax.hlines(i, 1e-7, prob, colors="#aac4d4", linewidth=1.5,
-                  linestyle="--", alpha=0.6)
+        ax.hlines(i, 1e-1, prob, colors="#aac4d4", linewidth=1.5,
+                  linestyle="--", alpha=0.6) # x axis was reversed so 1e-7 has to be replaced with 1e-1
         ax.scatter(prob, i, color="#1f6e8c", s=90, zorder=3)
         ax.annotate(
-            f"1 in {int(1 / prob):,}".replace(",", "\u202f"),
+            f"1 in {round(1 / prob):,}".replace(",", "\u202f"),
             xy=(prob, i),
             xytext=(0, offsets[i]),
             textcoords="offset points",
             ha="center",
-            va="bottom" if offsets[i] > 0 else "top",
+            va="bottom",  # dot should always be under the label
             fontsize=9,
             fontweight="bold",
             color="#1f6e8c",
@@ -60,28 +54,25 @@ def plot_probability_scale(labels: list[str], probs: list[float], out_path: str)
 
     ax.set_xscale("log")
     ax.set_xlim(1e-7, 1e-1)
+    ax.invert_xaxis()  # invert so it grows along the x axis
     ax.set_ylim(-0.8, len(labels_sorted) - 0.2)
     ax.set_yticks(range(len(labels_sorted)))
     ax.set_yticklabels(labels_sorted, fontsize=11)
-
-
     ax.xaxis.set_major_locator(ticker.LogLocator(base=10, numticks=10))
-    ax.xaxis.set_minor_locator(ticker.NullLocator())  # remove minor ticks for clarity
-
+    ax.xaxis.set_minor_locator(ticker.NullLocator())
     ax.xaxis.set_major_formatter(
         ticker.FuncFormatter(lambda x, _: f"1 in {round(1/x):,}".replace(",", "\u202f"))
-        # round up, ensures major ticks are consistent (10 000, 100 000, ...)
     )
 
     ax.set_xlabel("Annual probability per resident", fontsize=11)
     ax.set_title(
-        "Probability of being a crime victim in Estonia (2021)",
+        f"Probability of being a crime victim in Estonia ({year})",
         fontsize=13,
         fontweight="bold",
         pad=15,
     )
     ax.annotate(
-        "Source: Statistics Estonia JS009 · Population: 1\u202f331\u202f824",
+        "Source: Statistics Estonia JS009 · RV0240",
         xy=(0.5, -0.12),
         xycoords="axes fraction",
         ha="center",
@@ -93,8 +84,17 @@ def plot_probability_scale(labels: list[str], probs: list[float], out_path: str)
     ax.spines[["top", "right", "left"]].set_visible(False)
     fig.tight_layout()
     fig.savefig(out_path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
     print(f"Saved to {out_path}")
 
+def plot_all_years(data: dict, out_dir: str):
+    """Generate one lollipop chart per year and save to out_dir."""
+    for year, events in data.items():
+        labels = [e["label"] for e in events]
+        probs = [e["probability"] for e in events]
+        out_path = os.path.join(out_dir, f"probability_scale_{year}.png")
+        plot_probability_scale(labels, probs, year, out_path)
+
 if __name__ == "__main__":
-    labels, probs = load_events("data/processed.json")
-    plot_probability_scale(labels, probs, "output/probability_scale.png")
+    data = load_all_years("data/processed.json")
+    plot_all_years(data, "output")
