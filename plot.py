@@ -12,6 +12,7 @@ import os
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
+# Translate data labels to english for the plot
 CRIME_LABELS_EN = {
     "Manslaughter": "Manslaughter",
     "Murder": "Murder",
