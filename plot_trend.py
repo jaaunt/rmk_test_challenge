@@ -4,6 +4,9 @@ plot_trend.py — visualise how Estonian crime victim probabilities changed over
 Reads processed probabilities from data/processed.json and produces a single
 line chart with one line per crime type on a log-scaled y-axis.
 
+Anchor events (births, deaths, etc.) are excluded - they belong on the scale
+chart, not here, as they would just appear as flat lines.
+
 Run after fetch_data.py and process.py:
     python plot_trend.py
 """
@@ -14,7 +17,7 @@ import matplotlib.ticker as ticker
 
 
 def load_all_years(path: str) -> dict:
-    """Load processed crime probabilities for all years from JSON file."""
+    """Load processed probabilities for all years from JSON file."""
     with open(path, encoding="utf-8") as f:
         return json.load(f)
 
@@ -23,22 +26,21 @@ def plot_trend(data: dict, out_path: str):
     """
     Draw a line chart showing how crime probabilities changed over 2015–2021.
 
-    Each crime type is a separate line. Y-axis uses a log scale so all crime
-    types are visible despite large differences in magnitude.
+    Each crime type is a separate line. Anchor events are filtered out.
+    Y-axis uses a log scale so all crime types are visible despite large
+    differences in magnitude.
     """
     fig, ax = plt.subplots(figsize=(13, 7))
     fig.patch.set_facecolor("#f9f9f7")
     ax.set_facecolor("#f9f9f7")
 
     years = sorted(data.keys())
-    crime_labels = [e["label"] for e in data[years[0]]]
 
-    for label in crime_labels:
-        probs = [
-            next(e["probability"] for e in data[year] if e["label"] == label)
-            for year in years
-        ]
-        ax.plot(years, probs, marker="o", linewidth=2, markersize=6, label=label)
+    # Only plot crime events — anchors would just be flat horizontal lines
+    crime_labels = [
+        e["label"] for e in data[years[0]]
+        if e.get("category", "crime") == "crime"
+    ]
 
     ax.set_yscale("log")
     ax.yaxis.set_major_formatter(
@@ -52,6 +54,7 @@ def plot_trend(data: dict, out_path: str):
         fontweight="bold",
         pad=15,
     )
+
     for label in crime_labels:
         probs = [
             next(e["probability"] for e in data[year] if e["label"] == label)
@@ -67,6 +70,7 @@ def plot_trend(data: dict, out_path: str):
             fontsize=11,
             color=line.get_color(),
         )
+
     ax.grid(axis="y", which="major", alpha=0.25, color="#aaaaaa")
     # Shaded COVID-19 period (2020–2021)
     ax.axvspan("2020", "2021", alpha=0.08, color="red", zorder=0)
@@ -83,7 +87,7 @@ def plot_trend(data: dict, out_path: str):
         color="#888888",
     )
 
-    fig.subplots_adjust(right=0.82) # add extra room so labels fit
+    fig.subplots_adjust(right=0.82)  # extra room so right-side labels fit
     fig.tight_layout()
     fig.savefig(out_path, dpi=150, bbox_inches="tight")
     plt.close(fig)

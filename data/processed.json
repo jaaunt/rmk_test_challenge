@@ -3,259 +3,490 @@
     {
       "label": "Manslaughter",
       "count": 38,
-      "probability": 2.890019545658506e-05
+      "probability": 2.890019545658506e-05,
+      "category": "crime"
     },
     {
       "label": "Murder",
       "count": 12,
-      "probability": 9.126377512605808e-06
+      "probability": 9.126377512605808e-06,
+      "category": "crime"
     },
     {
       "label": "Assault",
       "count": 5657,
-      "probability": 0.004302326465734255
+      "probability": 0.004302326465734255,
+      "category": "crime"
     },
     {
       "label": "Theft",
       "count": 11354,
-      "probability": 0.008635074189843862
+      "probability": 0.008635074189843862,
+      "category": "crime"
     },
     {
       "label": "Robbery",
       "count": 337,
-      "probability": 0.00025629910181234646
+      "probability": 0.00025629910181234646,
+      "category": "crime"
     },
     {
       "label": "Fraud",
       "count": 885,
-      "probability": 0.0006730703415546784
+      "probability": 0.0006730703415546784,
+      "category": "crime"
     },
     {
       "label": "Traffic crime",
       "count": 4013,
-      "probability": 0.0030520127465072594
+      "probability": 0.0030520127465072594,
+      "category": "crime"
+    },
+    {
+      "label": "Being born in Estonia\n(in a given year)",
+      "count": 13907,
+      "probability": 0.010576711005650748,
+      "source": "Statistics Estonia RV030",
+      "category": "anchor"
+    },
+    {
+      "label": "Dying in Estonia\n(in a given year)",
+      "count": 15751,
+      "probability": 0.011979131016754508,
+      "source": "Statistics Estonia RV030",
+      "category": "anchor"
+    },
+    {
+      "label": "Dying on your birthday\n(birthday matches death date)",
+      "probability": 0.0027397260273972603,
+      "source": "deterministic (1/365)",
+      "category": "anchor"
+    },
+    {
+      "label": "Struck by lightning\n(fatality, Annual)",
+      "probability": 1e-06,
+      "source": "National Weather Service: https://www.weather.gov/safety/lightning-odds",
+      "category": "anchor"
     }
   ],
   "2016": [
     {
       "label": "Manslaughter",
       "count": 35,
-      "probability": 2.6596876462828205e-05
+      "probability": 2.6596876462828205e-05,
+      "category": "crime"
     },
     {
       "label": "Murder",
       "count": 9,
-      "probability": 6.839196804727253e-06
+      "probability": 6.839196804727253e-06,
+      "category": "crime"
     },
     {
       "label": "Assault",
       "count": 4823,
-      "probability": 0.0036650495765777266
+      "probability": 0.0036650495765777266,
+      "category": "crime"
     },
     {
       "label": "Theft",
       "count": 8982,
-      "probability": 0.006825518411117799
+      "probability": 0.006825518411117799,
+      "category": "crime"
     },
     {
       "label": "Robbery",
       "count": 248,
-      "probability": 0.00018845786750803985
+      "probability": 0.00018845786750803985,
+      "category": "crime"
     },
     {
       "label": "Fraud",
       "count": 937,
-      "probability": 0.0007120363784477151
+      "probability": 0.0007120363784477151,
+      "category": "crime"
     },
     {
       "label": "Traffic crime",
       "count": 3736,
-      "probability": 0.0028390265847178906
+      "probability": 0.0028390265847178906,
+      "category": "crime"
+    },
+    {
+      "label": "Being born in Estonia\n(in a given year)",
+      "count": 15243,
+      "probability": 0.011583319654939724,
+      "source": "Statistics Estonia RV030",
+      "category": "anchor"
+    },
+    {
+      "label": "Dying in Estonia\n(in a given year)",
+      "count": 14099,
+      "probability": 0.010713981749983281,
+      "source": "Statistics Estonia RV030",
+      "category": "anchor"
+    },
+    {
+      "label": "Dying on your birthday\n(birthday matches death date)",
+      "probability": 0.0027397260273972603,
+      "source": "deterministic (1/365)",
+      "category": "anchor"
+    },
+    {
+      "label": "Struck by lightning\n(fatality, Annual)",
+      "probability": 1e-06,
+      "source": "National Weather Service: https://www.weather.gov/safety/lightning-odds",
+      "category": "anchor"
     }
   ],
   "2017": [
     {
       "label": "Manslaughter",
       "count": 37,
-      "probability": 2.8123301675616716e-05
+      "probability": 2.8123301675616716e-05,
+      "category": "crime"
     },
     {
       "label": "Murder",
       "count": 8,
-      "probability": 6.08071387580902e-06
+      "probability": 6.08071387580902e-06,
+      "category": "crime"
     },
     {
       "label": "Assault",
       "count": 4710,
-      "probability": 0.0035800202943825606
+      "probability": 0.0035800202943825606,
+      "category": "crime"
     },
     {
       "label": "Theft",
       "count": 7633,
-      "probability": 0.005801761126756282
+      "probability": 0.005801761126756282,
+      "category": "crime"
     },
     {
       "label": "Robbery",
       "count": 201,
-      "probability": 0.00015277793612970163
+      "probability": 0.00015277793612970163,
+      "category": "crime"
     },
     {
       "label": "Fraud",
       "count": 832,
-      "probability": 0.0006323942430841381
+      "probability": 0.0006323942430841381,
+      "category": "crime"
     },
     {
       "label": "Traffic crime",
       "count": 3277,
-      "probability": 0.0024908124213782698
+      "probability": 0.0024908124213782698,
+      "category": "crime"
+    },
+    {
+      "label": "Being born in Estonia\n(in a given year)",
+      "count": 14053,
+      "probability": 0.01068153401209302,
+      "source": "Statistics Estonia RV030",
+      "category": "anchor"
+    },
+    {
+      "label": "Dying in Estonia\n(in a given year)",
+      "count": 15401,
+      "probability": 0.01170613430016684,
+      "source": "Statistics Estonia RV030",
+      "category": "anchor"
+    },
+    {
+      "label": "Dying on your birthday\n(birthday matches death date)",
+      "probability": 0.0027397260273972603,
+      "source": "deterministic (1/365)",
+      "category": "anchor"
+    },
+    {
+      "label": "Struck by lightning\n(fatality, Annual)",
+      "probability": 1e-06,
+      "source": "National Weather Service: https://www.weather.gov/safety/lightning-odds",
+      "category": "anchor"
     }
   ],
   "2018": [
     {
       "label": "Manslaughter",
       "count": 36,
-      "probability": 2.7290652269331447e-05
+      "probability": 2.7290652269331447e-05,
+      "category": "crime"
     },
     {
       "label": "Murder",
       "count": 7,
-      "probability": 5.3065157190366705e-06
+      "probability": 5.3065157190366705e-06,
+      "category": "crime"
     },
     {
       "label": "Assault",
       "count": 5966,
-      "probability": 0.00452266753996754
+      "probability": 0.00452266753996754,
+      "category": "crime"
     },
     {
       "label": "Theft",
       "count": 7403,
-      "probability": 0.005612019409718353
+      "probability": 0.005612019409718353,
+      "category": "crime"
     },
     {
       "label": "Robbery",
       "count": 170,
-      "probability": 0.00012887252460517628
+      "probability": 0.00012887252460517628,
+      "category": "crime"
     },
     {
       "label": "Fraud",
       "count": 717,
-      "probability": 0.0005435388243641846
+      "probability": 0.0005435388243641846,
+      "category": "crime"
     },
     {
       "label": "Traffic crime",
       "count": 3389,
-      "probability": 0.0025691116816878965
+      "probability": 0.0025691116816878965,
+      "category": "crime"
+    },
+    {
+      "label": "Being born in Estonia\n(in a given year)",
+      "count": 15392,
+      "probability": 0.01166826999248749,
+      "source": "Statistics Estonia RV030",
+      "category": "anchor"
+    },
+    {
+      "label": "Dying in Estonia\n(in a given year)",
+      "count": 13209,
+      "probability": 0.010013395161822198,
+      "source": "Statistics Estonia RV030",
+      "category": "anchor"
+    },
+    {
+      "label": "Dying on your birthday\n(birthday matches death date)",
+      "probability": 0.0027397260273972603,
+      "source": "deterministic (1/365)",
+      "category": "anchor"
+    },
+    {
+      "label": "Struck by lightning\n(fatality, Annual)",
+      "probability": 1e-06,
+      "source": "National Weather Service: https://www.weather.gov/safety/lightning-odds",
+      "category": "anchor"
     }
   ],
   "2019": [
     {
       "label": "Manslaughter",
       "count": 29,
-      "probability": 2.1889766156911883e-05
+      "probability": 2.1889766156911883e-05,
+      "category": "crime"
     },
     {
       "label": "Murder",
       "count": 5,
-      "probability": 3.7740976132606694e-06
+      "probability": 3.7740976132606694e-06,
+      "category": "crime"
     },
     {
       "label": "Assault",
       "count": 6557,
-      "probability": 0.0049493516100300415
+      "probability": 0.0049493516100300415,
+      "category": "crime"
     },
     {
       "label": "Theft",
       "count": 6804,
-      "probability": 0.005135792032125119
+      "probability": 0.005135792032125119,
+      "category": "crime"
     },
     {
       "label": "Robbery",
       "count": 152,
-      "probability": 0.00011473256744312435
+      "probability": 0.00011473256744312435,
+      "category": "crime"
     },
     {
       "label": "Fraud",
       "count": 986,
-      "probability": 0.000744252049335004
+      "probability": 0.000744252049335004,
+      "category": "crime"
     },
     {
       "label": "Traffic crime",
       "count": 3460,
-      "probability": 0.0026116755483763833
+      "probability": 0.0026116755483763833,
+      "category": "crime"
+    },
+    {
+      "label": "Being born in Estonia\n(in a given year)",
+      "count": 13784,
+      "probability": 0.010404432300237014,
+      "source": "Statistics Estonia RV030",
+      "category": "anchor"
+    },
+    {
+      "label": "Dying in Estonia\n(in a given year)",
+      "count": 15811,
+      "probability": 0.01193445147265289,
+      "source": "Statistics Estonia RV030",
+      "category": "anchor"
+    },
+    {
+      "label": "Dying on your birthday\n(birthday matches death date)",
+      "probability": 0.0027397260273972603,
+      "source": "deterministic (1/365)",
+      "category": "anchor"
+    },
+    {
+      "label": "Struck by lightning\n(fatality, Annual)",
+      "probability": 1e-06,
+      "source": "National Weather Service: https://www.weather.gov/safety/lightning-odds",
+      "category": "anchor"
     }
   ],
   "2020": [
     {
       "label": "Manslaughter",
       "count": 37,
-      "probability": 2.7842807036554594e-05
+      "probability": 2.7842807036554594e-05,
+      "category": "crime"
     },
     {
       "label": "Murder",
       "count": 13,
-      "probability": 9.782607877708372e-06
+      "probability": 9.782607877708372e-06,
+      "category": "crime"
     },
     {
       "label": "Assault",
       "count": 6023,
-      "probability": 0.004532357480572117
+      "probability": 0.004532357480572117,
+      "category": "crime"
     },
     {
       "label": "Theft",
       "count": 6863,
-      "probability": 0.005164464451131735
+      "probability": 0.005164464451131735,
+      "category": "crime"
     },
     {
       "label": "Robbery",
       "count": 113,
-      "probability": 8.50334377062343e-05
+      "probability": 8.50334377062343e-05,
+      "category": "crime"
     },
     {
       "label": "Fraud",
       "count": 992,
-      "probability": 0.0007464882318989772
+      "probability": 0.0007464882318989772,
+      "category": "crime"
     },
     {
       "label": "Traffic crime",
       "count": 3468,
-      "probability": 0.0026096987784532794
+      "probability": 0.0026096987784532794,
+      "category": "crime"
+    },
+    {
+      "label": "Being born in Estonia\n(in a given year)",
+      "count": 15543,
+      "probability": 0.011696236480247786,
+      "source": "Statistics Estonia RV030",
+      "category": "anchor"
+    },
+    {
+      "label": "Dying in Estonia\n(in a given year)",
+      "count": 13272,
+      "probability": 0.009987290134841962,
+      "source": "Statistics Estonia RV030",
+      "category": "anchor"
+    },
+    {
+      "label": "Dying on your birthday\n(birthday matches death date)",
+      "probability": 0.0027397260273972603,
+      "source": "deterministic (1/365)",
+      "category": "anchor"
+    },
+    {
+      "label": "Struck by lightning\n(fatality, Annual)",
+      "probability": 1e-06,
+      "source": "National Weather Service: https://www.weather.gov/safety/lightning-odds",
+      "category": "anchor"
     }
   ],
   "2021": [
     {
       "label": "Manslaughter",
       "count": 20,
-      "probability": 1.5036825184877766e-05
+      "probability": 1.5036825184877766e-05,
+      "category": "crime"
     },
     {
       "label": "Murder",
       "count": 7,
-      "probability": 5.262888814707218e-06
+      "probability": 5.262888814707218e-06,
+      "category": "crime"
     },
     {
       "label": "Assault",
       "count": 5646,
-      "probability": 0.004244895749690994
+      "probability": 0.004244895749690994,
+      "category": "crime"
     },
     {
       "label": "Theft",
       "count": 7513,
-      "probability": 0.005648583380699333
+      "probability": 0.005648583380699333,
+      "category": "crime"
     },
     {
       "label": "Robbery",
       "count": 129,
-      "probability": 9.698752244246159e-05
+      "probability": 9.698752244246159e-05,
+      "category": "crime"
     },
     {
       "label": "Fraud",
       "count": 1457,
-      "probability": 0.0010954327147183452
+      "probability": 0.0010954327147183452,
+      "category": "crime"
     },
     {
       "label": "Traffic crime",
       "count": 3013,
-      "probability": 0.0022652977141018353
+      "probability": 0.0022652977141018353,
+      "category": "crime"
+    },
+    {
+      "label": "Being born in Estonia\n(in a given year)",
+      "count": 14367,
+      "probability": 0.010801703371556943,
+      "source": "Statistics Estonia RV030",
+      "category": "anchor"
+    },
+    {
+      "label": "Dying in Estonia\n(in a given year)",
+      "count": 18587,
+      "probability": 0.013974473485566151,
+      "source": "Statistics Estonia RV030",
+      "category": "anchor"
+    },
+    {
+      "label": "Dying on your birthday\n(birthday matches death date)",
+      "probability": 0.0027397260273972603,
+      "source": "deterministic (1/365)",
+      "category": "anchor"
+    },
+    {
+      "label": "Struck by lightning\n(fatality, Annual)",
+      "probability": 1e-06,
+      "source": "National Weather Service: https://www.weather.gov/safety/lightning-odds",
+      "category": "anchor"
     }
   ]
 }
