@@ -7,7 +7,8 @@ API_BASE = "https://andmed.stat.ee/api/v1/et/stat"
 
 def fetch_crime_data():
     """
-    Fetch selected crime types for Estonia 2021 from Statistics Estonia API (JS009).
+    Fetch selected crime types for all available years (2006–2021)
+    from Statistics Estonia API (JS009).
 
     Crime type codes (from API metadata):
         6  - tapmine (manslaughter)
@@ -26,7 +27,7 @@ def fetch_crime_data():
         "query": [
             {
                 "code": "Aasta",
-                "selection": {"filter": "item", "values": ["2021"]}
+                "selection": {"filter": "all", "values": ["*"]}
             },
             {
                 "code": "Kuriteo aste/liik",
