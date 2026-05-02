@@ -1,37 +1,261 @@
-[
-  {
-    "label": "Tapmine",
-    "count": 20,
-    "probability": 1.5016999243143238e-05
-  },
-  {
-    "label": "Mõrv",
-    "count": 7,
-    "probability": 5.255949735100133e-06
-  },
-  {
-    "label": "Kehaline väärkohtlemine",
-    "count": 5646,
-    "probability": 0.004239298886339336
-  },
-  {
-    "label": "Vargus",
-    "count": 7513,
-    "probability": 0.005641135765686757
-  },
-  {
-    "label": "Röövimine",
-    "count": 129,
-    "probability": 9.685964511827388e-05
-  },
-  {
-    "label": "Kelmus",
-    "count": 1457,
-    "probability": 0.001093988394862985
-  },
-  {
-    "label": "Liikluskuritegu",
-    "count": 3013,
-    "probability": 0.0022623109359795287
-  }
-]
+{
+  "2015": [
+    {
+      "label": "Manslaughter",
+      "count": 38,
+      "probability": 2.890019545658506e-05
+    },
+    {
+      "label": "Murder",
+      "count": 12,
+      "probability": 9.126377512605808e-06
+    },
+    {
+      "label": "Assault",
+      "count": 5657,
+      "probability": 0.004302326465734255
+    },
+    {
+      "label": "Theft",
+      "count": 11354,
+      "probability": 0.008635074189843862
+    },
+    {
+      "label": "Robbery",
+      "count": 337,
+      "probability": 0.00025629910181234646
+    },
+    {
+      "label": "Fraud",
+      "count": 885,
+      "probability": 0.0006730703415546784
+    },
+    {
+      "label": "Traffic crime",
+      "count": 4013,
+      "probability": 0.0030520127465072594
+    }
+  ],
+  "2016": [
+    {
+      "label": "Manslaughter",
+      "count": 35,
+      "probability": 2.6596876462828205e-05
+    },
+    {
+      "label": "Murder",
+      "count": 9,
+      "probability": 6.839196804727253e-06
+    },
+    {
+      "label": "Assault",
+      "count": 4823,
+      "probability": 0.0036650495765777266
+    },
+    {
+      "label": "Theft",
+      "count": 8982,
+      "probability": 0.006825518411117799
+    },
+    {
+      "label": "Robbery",
+      "count": 248,
+      "probability": 0.00018845786750803985
+    },
+    {
+      "label": "Fraud",
+      "count": 937,
+      "probability": 0.0007120363784477151
+    },
+    {
+      "label": "Traffic crime",
+      "count": 3736,
+      "probability": 0.0028390265847178906
+    }
+  ],
+  "2017": [
+    {
+      "label": "Manslaughter",
+      "count": 37,
+      "probability": 2.8123301675616716e-05
+    },
+    {
+      "label": "Murder",
+      "count": 8,
+      "probability": 6.08071387580902e-06
+    },
+    {
+      "label": "Assault",
+      "count": 4710,
+      "probability": 0.0035800202943825606
+    },
+    {
+      "label": "Theft",
+      "count": 7633,
+      "probability": 0.005801761126756282
+    },
+    {
+      "label": "Robbery",
+      "count": 201,
+      "probability": 0.00015277793612970163
+    },
+    {
+      "label": "Fraud",
+      "count": 832,
+      "probability": 0.0006323942430841381
+    },
+    {
+      "label": "Traffic crime",
+      "count": 3277,
+      "probability": 0.0024908124213782698
+    }
+  ],
+  "2018": [
+    {
+      "label": "Manslaughter",
+      "count": 36,
+      "probability": 2.7290652269331447e-05
+    },
+    {
+      "label": "Murder",
+      "count": 7,
+      "probability": 5.3065157190366705e-06
+    },
+    {
+      "label": "Assault",
+      "count": 5966,
+      "probability": 0.00452266753996754
+    },
+    {
+      "label": "Theft",
+      "count": 7403,
+      "probability": 0.005612019409718353
+    },
+    {
+      "label": "Robbery",
+      "count": 170,
+      "probability": 0.00012887252460517628
+    },
+    {
+      "label": "Fraud",
+      "count": 717,
+      "probability": 0.0005435388243641846
+    },
+    {
+      "label": "Traffic crime",
+      "count": 3389,
+      "probability": 0.0025691116816878965
+    }
+  ],
+  "2019": [
+    {
+      "label": "Manslaughter",
+      "count": 29,
+      "probability": 2.1889766156911883e-05
+    },
+    {
+      "label": "Murder",
+      "count": 5,
+      "probability": 3.7740976132606694e-06
+    },
+    {
+      "label": "Assault",
+      "count": 6557,
+      "probability": 0.0049493516100300415
+    },
+    {
+      "label": "Theft",
+      "count": 6804,
+      "probability": 0.005135792032125119
+    },
+    {
+      "label": "Robbery",
+      "count": 152,
+      "probability": 0.00011473256744312435
+    },
+    {
+      "label": "Fraud",
+      "count": 986,
+      "probability": 0.000744252049335004
+    },
+    {
+      "label": "Traffic crime",
+      "count": 3460,
+      "probability": 0.0026116755483763833
+    }
+  ],
+  "2020": [
+    {
+      "label": "Manslaughter",
+      "count": 37,
+      "probability": 2.7842807036554594e-05
+    },
+    {
+      "label": "Murder",
+      "count": 13,
+      "probability": 9.782607877708372e-06
+    },
+    {
+      "label": "Assault",
+      "count": 6023,
+      "probability": 0.004532357480572117
+    },
+    {
+      "label": "Theft",
+      "count": 6863,
+      "probability": 0.005164464451131735
+    },
+    {
+      "label": "Robbery",
+      "count": 113,
+      "probability": 8.50334377062343e-05
+    },
+    {
+      "label": "Fraud",
+      "count": 992,
+      "probability": 0.0007464882318989772
+    },
+    {
+      "label": "Traffic crime",
+      "count": 3468,
+      "probability": 0.0026096987784532794
+    }
+  ],
+  "2021": [
+    {
+      "label": "Manslaughter",
+      "count": 20,
+      "probability": 1.5036825184877766e-05
+    },
+    {
+      "label": "Murder",
+      "count": 7,
+      "probability": 5.262888814707218e-06
+    },
+    {
+      "label": "Assault",
+      "count": 5646,
+      "probability": 0.004244895749690994
+    },
+    {
+      "label": "Theft",
+      "count": 7513,
+      "probability": 0.005648583380699333
+    },
+    {
+      "label": "Robbery",
+      "count": 129,
+      "probability": 9.698752244246159e-05
+    },
+    {
+      "label": "Fraud",
+      "count": 1457,
+      "probability": 0.0010954327147183452
+    },
+    {
+      "label": "Traffic crime",
+      "count": 3013,
+      "probability": 0.0022652977141018353
+    }
+  ]
+}

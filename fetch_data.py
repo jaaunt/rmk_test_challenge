@@ -49,12 +49,40 @@ def fetch_crime_data():
     r.raise_for_status()
     return r.json()
 
+def fetch_population() -> dict:
+    """
+    Fetch total Estonian population per year (2015–2021) from Statistics Estonia API (RV0240).
+
+    Returns a dict mapping year strings to population counts.
+    Sugu code '1' = Mehed ja naised (all), Elukoht '00' = Kogu Eesti, Vanus '000' = Kokku.
+    """
+    url = f"{API_BASE}/RV0240"
+
+    query = {
+        "query": [
+            {"code": "Sugu", "selection": {"filter": "item", "values": ["1"]}},
+            {"code": "Elukoht", "selection": {"filter": "item", "values": ["00"]}},
+            {"code": "Vanus", "selection": {"filter": "item", "values": ["000"]}},
+            {"code": "Aasta", "selection": {"filter": "item",
+                "values": ["2015","2016","2017","2018","2019","2020","2021"]}}
+        ],
+        "response": {"format": "json-stat2"}
+    }
+
+    r = requests.post(url, json=query)
+    r.raise_for_status()
+    data = r.json()
+
+    years = ["2015","2016","2017","2018","2019","2020","2021"]
+    return {year: value for year, value in zip(years, data["value"])}
 
 if __name__ == "__main__":
     data = fetch_crime_data()
+    population = fetch_population()
 
     with open("data/crimes_raw.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+    with open("data/population.json", "w", encoding="utf-8") as f:
+        json.dump(population, f, ensure_ascii=False, indent=2)
 
-    print("Saved to data/crimes_raw.json")
-    print("Values:", data["value"])
+    print("Saved crimes_raw.json and population.json")
