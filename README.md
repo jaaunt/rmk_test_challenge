@@ -46,7 +46,7 @@ working with rare events - interpret with caution.
 - Assumes each reported case involves a unique victim.
 - Population used as denominator is total Estonian population, not at-risk subgroups.
 - With rare crime types (e.g. murder, ~7 cases/year), small absolute changes
-  produce large swings in probability — interpret with caution.
+  produce large swings in probability - interpret with caution.
 
 ## How to run
 
